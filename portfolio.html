@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #444;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    #home img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-top: 20px;
+      border: 3px solid #333;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .skills, .projects {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .skill-box, .project-box {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      flex: 1 1 45%;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+
+    #success-message {
+      display: none;
+      color: green;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>R. KEERTHANA</h1>
+    <p><strong>Web Developer</strong> | Web-Based Designer | Editor</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Me</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="home">
+    <h2>Home</h2>
+    <!-- Base64 placeholder image -->
+    <img src="C:\Users\keert\OneDrive\Pictures\Screenshots\Screenshot 2025-08-09 123502.png" alt="My Photo">
+    <p>Hello and welcome! I'm <strong>R. Keerthana</strong> — a passionate web developer, creative designer, and a dedicated state-level handball player.</p>
+    <p>This portfolio is a reflection of my journey in both technology and sports. Here, I find information about my background, technical skills, academic projects, and my achievements in handball.</p>
+    <p>Whether you're here to explore my development work, discuss collaboration, or learn more about my experience as a sportsperson, I'm glad you stopped by!</p>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm <strong>R. Keerthana</strong>, a Bachelor of Science in Computer Science student with a strong passion for technology, innovation, and continuous learning.</p>
+    <p>Throughout my academic journey, I've developed a solid foundation in programming, web development, databases, and software design. I enjoy solving real-world problems through logical thinking and creative solutions.</p>
+    <p>Alongside my studies, I actively build projects to apply my knowledge in practical ways — from web-based applications to simple games. I’m eager to learn new technologies, collaborate with others, and contribute to impactful projects in the tech space.</p>
+    <p>As a tech enthusiast and a team player, I strive to improve my technical and interpersonal skills every day, preparing myself for a dynamic career in the software and IT industry.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+        <li><strong>Programming Languages:</strong> C, C++, Python (Basic)</li>
+        <li><strong>Web Technologies:</strong> HTML, CSS, JavaScript (Basic Knowledge)</li>
+        <li><strong>Database:</strong> MySQL (Basic Knowledge)</li>
+        <li><strong>Tools & Platforms:</strong> MS Office, Visual Studio Code, Git (Beginner)</li>
+        <li><strong>Soft Skills:</strong> Teamwork, Time Management, Communication, Leadership</li>
+        <li><strong>Other:</strong> Sports discipline, Fast learner, Adaptability</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-box">
+        <h3>Web-Based Project: Online Quiz Application</h3>
+        <p>This project allows users to take quizzes on various topics through a web interface.</p>
+        <p>It includes user login, a question bank, timer, and result calculation.</p>
+        <p>Admin can add, edit, or delete questions from the dashboard.</p>
+        <p>It helps users test their knowledge and view scores instantly.</p>
+      </div>
+
+      <div class="project-box">
+        <h3>Game Development: Number Guessing Game</h3>
+        <p>The game generates a random number, and the player tries to guess it within a few attempts.</p>
+        <p>After each guess, the game gives hints like "Too high" or "Too low."</p>
+        <p>Teaches basic logic, loops, random number generation, and user input.</p>
+        <p>Easy to build in any programming language with a simple interface.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Reach out if you'd like to collaborate, learn about handball, or invite me for events, coaching, or training.</p>
+    <form id="contactForm" onsubmit="submitForm(event)">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="success-message">✅ Message sent successfully!</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 R. Keerthana. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function submitForm(e) {
+      e.preventDefault();
+      const message = document.getElementById("success-message");
+      message.style.display = "block";
+      message.textContent = "✅ Sending...";
+
+      setTimeout(() => {
+        message.textContent = "✅ Message sent successfully!";
+        document.getElementById("contactForm").reset();
+      }, 1000);
+    }
+  </script>
+
+</body
